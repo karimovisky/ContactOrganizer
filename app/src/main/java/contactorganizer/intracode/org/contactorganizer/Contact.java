@@ -45,4 +45,20 @@ public class Contact {
     public int get_id() {
         return _id;
     }
+
+    public void set_name(String _name) {
+        this._name = _name;
+    }
+
+    public void set_phone(String _phone) {
+        this._phone = _phone;
+    }
+
+    public void set_email(String _email) {
+        this._email = _email;
+    }
+
+    public void set_address(String _address) {
+        this._address = _address;
+    }
 }

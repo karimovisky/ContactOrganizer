@@ -142,6 +142,7 @@ public class MainActivity extends AppCompatActivity {
         switch(item.getItemId()){
             case EDIT:
                 // TODO: Implement editing a contact
+                update(longClickedItemIndex);
                 break;
             case DELETE:
                 // TODO: Delete a contact
@@ -151,6 +152,16 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         return super.onContextItemSelected(item);
+
+    }
+
+    private void update (int id){
+        id = Contacts.get(id).get_id();
+        Intent intent = new Intent(MainActivity.this, Edit.class);
+        Bundle bundle = new Bundle();
+        bundle.putInt("id",id);
+        intent.putExtras(bundle);
+        startActivity(intent);
 
     }
 
